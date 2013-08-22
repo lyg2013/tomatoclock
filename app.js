@@ -1,14 +1,17 @@
 var http = require('http')
+  , express = require('express')
   , io = require('socket.io')
-  , time = require('./time');
+  , time = require('./lib/time');
 
-var app = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write("hello Nodejs!");
-    res.end();
-}).listen(3000);
+var app = express();
+app.use(express.static(__dirname + '/public'));
+app.get('/', function(req, res) {
+    res.sendFile('index.html');
+})
+server = app.listen(3000);
 
-var ws = io.listen(app);
+
+var ws = io.listen(server);
 ws.on('connection', function(socket) {
     var timeInterval;
     socket.send('hello client!')

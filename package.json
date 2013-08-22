@@ -1,0 +1,27 @@
+{
+  "name": "tomatoclock",
+  "version": "0.1.0",
+  "description": "a web clock which use nodejs+express+socket.io to implement",
+  "main": "app.js",
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "express": "3.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hufeng/tomatoclock.git"
+  },
+  "keywords": [
+    "clock",
+    "tomato"
+  ],
+  "author": "hufeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hufeng/tomatoclock/issues"
+  }
+}
